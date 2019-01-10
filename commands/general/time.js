@@ -9,8 +9,8 @@ module.exports.load = (client) => {
                 msg.addField('Overall Practice Time', `\`${client.hd(res.overall_session_playtime * 1000)}\``, false)
                 msg.setColor(client.settings.embed_color)
                 msg.setTimestamp()
-                client.fetchLeaderboardPos(message, pos => {
-                    msg.setDescription(`You are rank ${pos}`)
+                client.fetchWeeklyLeaderboardPos(message, pos => {
+                    msg.setDescription(`You are weekly rank ${pos}`)
                     message.channel.send(msg)
                     .then(m => {
                         setTimeout(()=>{

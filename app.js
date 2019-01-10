@@ -19,6 +19,7 @@ require('./library/database_lib.js')(client)
 
 //weekly wipe at 12 am on monday
 client.cron.schedule('0 0 * * mon', () => {
+    client.submitweek()
     client.clearWeekResults()
     client.log('Cleared weekly results')
 })

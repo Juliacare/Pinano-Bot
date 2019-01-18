@@ -39,7 +39,7 @@ module.exports = (client, db) => {
             }
 
             client.fetchOverallLeaderboardPos(message, pos => {
-                msgStr = `**${message.author.username}**, you are rank ${pos}\n ${msgStr}`
+                msgStr = `**${message.author.username}**, your overall rank is ${pos}\n ${msgStr}`
                 callback(msgStr)
             })
         }

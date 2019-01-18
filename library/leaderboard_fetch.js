@@ -78,7 +78,7 @@ module.exports = (client, db) => {
 
             if(message != null){
                 client.fetchWeeklyLeaderboardPos(message, pos => {
-                    msgStr = `**${message.author.username}**, you are rank ${pos}\n ${msgStr}`
+                    msgStr = `**${message.author.username}**, your weekly rank is ${pos}\n ${msgStr}`
                     callback(msgStr)
                 })
             } else {

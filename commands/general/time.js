@@ -10,7 +10,7 @@ module.exports.load = (client) => {
                 msg.setColor(client.settings.embed_color)
                 msg.setTimestamp()
                 client.fetchWeeklyLeaderboardPos(message, pos => {
-                    msg.setDescription(`You are weekly rank ${pos}`)
+                    msg.setDescription(`Your weekly rank is ${pos}`)
                     message.channel.send(msg)
                     .then(m => {
                         setTimeout(()=>{
